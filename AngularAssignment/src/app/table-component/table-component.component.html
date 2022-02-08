@@ -1,0 +1,22 @@
+<h1 style="text-align: center; font-weight: bold; text-decoration: underline; font-style: italic;">Posts</h1>
+<table class="table table-striped design">
+  <thead>
+    <tr>
+      <th scope="col">UserId </th>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Body</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr   *ngFor="let data of users | paginate: { itemsPerPage: 10, currentPage: page, totalItems:users.length }">
+      <th>{{data.userId}}</th>
+      <td>{{data.id}}</td>
+      <td>{{data.title}}</td>
+      <td>{{data.body}}</td>
+
+    </tr>
+  </tbody>
+</table>
+
+<pagination-controls (pageChange)="page = $event"></pagination-controls>

@@ -1,0 +1,23 @@
+.displayData{
+  text-decoration: none;
+  font-size: 18px;
+  font-style: italic;
+  word-spacing: 10px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.formDesign{
+  margin: 50px;
+}
+
+.heading{
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.invalid{
+  color: red;
+}

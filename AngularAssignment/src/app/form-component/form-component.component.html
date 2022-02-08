@@ -1,0 +1,43 @@
+<h1 class="heading"> Employee Information </h1>
+<div  class="formDesign">
+<form [formGroup] = 'employeeForm' (ngSubmit)='getEmployeeData()'>
+  <div class="mb-3">
+    <label for="ename" class="form-label">Employee Name</label>
+    <input type="text" class="form-control" id="ename" formControlName="ename">
+    <p *ngIf="ename && ename.invalid && ename.touched" class="invalid"> This field is invalid</p>
+
+  </div>
+  <div class="mb-3">
+    <label for="eaddress" class="form-label">Employee Address</label>
+    <input type="text" class="form-control" id="eaddress" formControlName="eaddress">
+    <p *ngIf="eaddress && eaddress.invalid && eaddress.touched" class="invalid"> This field is invalid</p>
+  </div>
+  <div class="mb-3">
+    <label for="ephonenumber" class="form-label">Employee Phone Number</label>
+    <input type="text" class="form-control" id="ephonenumber" formControlName="ephonenumber">
+    <p *ngIf="ephonenumber && ephonenumber.invalid && ephonenumber.touched" class="invalid"> This field is invalid</p>
+  </div>
+  <div class="mb-3">
+    <label for="edob" class="form-label">Employee DOB</label>
+    <input type="text" class="form-control" id="edob" formControlName="edob">
+    <p *ngIf="edob && edob.invalid && edob.touched" class="invalid"> This field is invalid</p>
+  </div>
+  <div class="mb-3">
+    <label for="eemail" class="form-label">Employee Email</label>
+    <input type="text" class="form-control" id="eemail" formControlName="eemail">
+    <p *ngIf="eemail && eemail.invalid && eemail.touched" class="invalid"> This field is invalid</p>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<br>
+<ul *ngIf="employeeData.ename && employeeData.eaddress && employeeData.ephonenumber && employeeData.edob && employeeData.eemail" class="displayData">
+  <li>Employee Name : {{employeeData.ename}} </li>
+  <li>Employee Address :  {{employeeData.eaddress}} </li>
+  <li>Employee Phone Number {{employeeData.ephonenumber}} </li>
+  <li>Employee DOB : {{employeeData.edob}} </li>
+  <li>Employee Email : {{employeeData.eemail}} </li>
+</ul>
+</div>
+<br><br>

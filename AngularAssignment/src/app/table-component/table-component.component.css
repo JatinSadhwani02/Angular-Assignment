@@ -1,0 +1,14 @@
+@keyframes example {
+  0%   {background-color:wheat; }
+  25%  {background-color:grey;}
+  50%  {background-color:skyblue;}
+  75%  {background-color:aqua;}
+  100% {background-color:pink; }
+}
+
+.design{
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 1000;
+}
+
